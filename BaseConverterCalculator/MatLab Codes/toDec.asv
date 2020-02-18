@@ -1,0 +1,12 @@
+res(110 , )
+
+function res = toDec (num,base)
+res =0 ;
+    temp = fliplr(num2str(num));
+    class(temp)
+    disp(temp)
+    for i = 1:length(temp)
+    disp(temp(i))
+    res = res + str2double(temp(i))*base ;
+    end
+end

@@ -1,0 +1,18 @@
+function res = toBn (num,base)
+res ='' ;
+temp = num;
+class(temp)
+while temp ~= 0
+    m = mod(temp,base);
+    c ='';
+    if(m>=10)
+        c = 'A';
+    else 
+        c= '0';
+    end
+    res = strcat(res,char(c+ m ));
+fprintf('%d/%d = ',temp , base);  
+temp =floor(double(temp)/double(base));
+
+fprintf('%d\n',temp );
+end
